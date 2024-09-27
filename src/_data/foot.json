@@ -1,0 +1,17 @@
+{
+    "title": "Contact me",
+    "links": [
+        {
+            "name": "LinkedIn",
+            "url": "https://linkedin.com/in/oli-hepworth/"
+        },
+        {
+            "name": "GitHub",
+            "url": "https://github.com/olworth"
+        },
+        {
+            "name": "Email",
+            "url": "mailto:och26@cantab.ac.uk"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="wrapper">
+    <article class="home">
+        <h1 class="home__header">
+            {{ home.header }}
+        </h1>
+        <div class="home__content">
+            <p class="home__summary">
+                {{ home.summary }}
+            </p>
+            <p class ="home__excuse">
+                {{ home.excuse }}
+            </p>
+        </div>
+    </article>
+</div>
+{% endblock %}

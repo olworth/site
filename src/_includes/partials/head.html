@@ -1,0 +1,18 @@
+<a class="[ skip-link ] [ button ]" href="#content">Skip to content</a>
+<header role="banner" class="head">
+    <div class="wrapper">
+        <div class="head__content">
+            <nav class="[ head__nav ] [ nav ]" aria-label="Main">
+                <ul class="nav__list">
+                    {% for item in nav.items %}
+                    <li>
+                        <a href="{{ item.url }}" {{ functions.isCurrentOrActive(item.url, page.url) | safe }}>
+                            {{ item.name }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>    
+        </div>
+    </div>
+</header>

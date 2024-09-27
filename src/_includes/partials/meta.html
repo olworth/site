@@ -1,0 +1,13 @@
+{% set pageTitle = title %}
+
+{% if site.name != title %}
+    {% set pageTitle = pageTitle + ' - ' + site.name %}
+{% endif %}
+
+<title>{{ pageTitle }}</title>
+
+<link rel="canonical" href="{{ currentUrl }}" />
+<meta property="og:site_name" content="{{ site.name }}" />
+<meta property="og:title" content="{{ pageTitle }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ site.url + page.url }}" />

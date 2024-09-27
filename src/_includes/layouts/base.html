@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Oli Hepworth's personal site" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        {% include "partials/meta.html" %}
+    </head>
+    <body>
+        {% include "partials/head.html" %}
+        <main tabindex="-1" id="content">
+            {% block content %}
+            <p>
+                If you are seeing this, the template being rendered hasn't defined a block.
+            </p>
+            {% endblock %}
+        </main>
+        {% include "partials/foot.html" %}
+    </body>
+</html>
