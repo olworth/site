@@ -10,7 +10,8 @@ const shortRe = /\[(.*?)\]\((https?:\/\/[^\s]+)\)([.,;!?]?)$/;
 
 function shortUrl_urlize(str, length, nofollow) {
 // An altered version of the default Nunjucks urlize filter
-// Permits a pre-defined shortUrl if url is in the format [shortUrl]https://www.example.com
+// Permits a pre-defined shortUrl if url is in the format [shortUrl](https://www.example.com)
+// Also allows punctuation to trail this url, as in [shortUrl](https://www.example.com).
   if (isNaN(length)) {
     length = Infinity;
   }
