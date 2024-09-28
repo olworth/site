@@ -1,8 +1,4 @@
-{% set pageTitle = title %}
-
-{% if site.name != title %}
-    {% set pageTitle = pageTitle + ' - ' + site.name %}
-{% endif %}
+{% set pageTitle = title + ' - ' + site.name %}
 
 <title>{{ pageTitle }}</title>
 
