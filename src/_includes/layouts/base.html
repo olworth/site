@@ -16,6 +16,8 @@
             </p>
             {% endblock %}
         </main>
-        {% include "partials/foot.html" %}
+        {% if not noCta %}
+            {% include "partials/foot.html" %}
+        {% endif %}
     </body>
 </html>

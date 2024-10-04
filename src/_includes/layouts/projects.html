@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <article class="projects">
+        <h1 class="projects__header">
+            {{ projects.header }}
+        </h1>
+        <div class="projects__content">
+            {{ content | safe }}
+            {% for project in collections.projects %}
+                <a href="{{ project.url }}">{{ project.data.title }}</a>
+                <br>
+            {% endfor %}
+        </div>
+    </article>
+{% endblock %}

@@ -1,5 +1,4 @@
 {% extends "layouts/base.html" %}
-{% set nunjucks = "https://github.com/mozilla/nunjucks" %}
 
 {% block content %}
 <div class="wrapper">
@@ -8,12 +7,7 @@
             {{ home.header }}
         </h1>
         <div class="home__content">
-            <p class="home__summary">
-                {{ home.summary | shortUrl_urlize | safe }}
-            </p>
-            <p class ="home__excuse">
-                {{ home.excuse }}
-            </p>
+            {{ content | url | safe }}
         </div>
     </article>
 </div>

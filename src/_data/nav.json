@@ -5,20 +5,12 @@
             "url": "/"
         },
         {
-            "name": "Work",
-            "url": "/work/"
+            "name": "CV",
+            "url": "/cv/"
         },
-        {
-            "name": "Education",
-            "url": "/education/"
-        }, 
         {
             "name": "Projects",
             "url": "/projects/"
-        },
-        {
-            "name": "CV",
-            "url": "/cv/"
         },
         {
             "name": "Contact",

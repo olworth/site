@@ -1,17 +1,24 @@
 const path = require("path");
 const prettier = require("prettier");
-const shortUrl_urlize = require('./src/filters/shortUrl_urlize.js');
+const shortUrlize = require('./src/filters/shortUrlize.js');
+const initialCaps = require('./src/filters/initialCaps.js');
 
 module.exports = function(eleventyConfig) {
-    eleventyConfig.setNunjucksEnvironmentOptions({
     // Set Nunjucks options if wanted
+    eleventyConfig.setNunjucksEnvironmentOptions({
         trimBlocks: false,
         lstripBlocks: false
     });
+    // Add collections
+    eleventyConfig.addCollection("projects", function (collectionApi) {
+        return collectionApi.getFilteredByGlob("./src/projects/*.md");
+    });
+    // Add passthrough copies
+    eleventyConfig.addPassthroughCopy("./src/downloads/");
     // Add transforms
     eleventyConfig.addTransform("prettier", function(content, outputPath) {
-    // Prettify output HTML with prettier. 
-    // I like pretty things more than fast things.
+    // Prettify output HTML with prettier 
+    // I like pretty things more than fast things
         const extension = path.extname(outputPath);
         switch (extension) {
             case ".html":
@@ -22,7 +29,8 @@ module.exports = function(eleventyConfig) {
         }
     });
     // Add filters
-    eleventyConfig.addFilter('shortUrl_urlize', shortUrl_urlize);
+    eleventyConfig.addFilter('shortUrlize', shortUrlize);
+    eleventyConfig.addFilter('initialCaps', initialCaps);
     return {
         // Nunjucks
         markdownTemplateEngine: 'njk',

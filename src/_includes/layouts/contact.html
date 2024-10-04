@@ -1,0 +1,20 @@
+{% extends "layouts/base.html" %}
+{% set noCta = "noCta" %}
+
+{% block content %}
+    <article class="contact">
+        <h1 class="contact__header">
+            {{ contact.header }}
+        </h1>
+        <div class="contact__content">
+            {{ content | safe }}
+            {% for link in foot.links %} 
+            <li>
+                <a class="button" href="{{ link.url }}">
+                    {{ link.name }}
+                </a>
+            </li>
+            {% endfor %}
+        </div>
+    </article>
+{% endblock %}

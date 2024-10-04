@@ -1,0 +1,61 @@
+{
+    "experience": {
+        "therml":{
+            "name": "TherML",
+            "time": "Aug 2024 - present",
+            "position": "Machine Learning Engineer",
+            "responsibilities": [
+                "Developing Faster-RCNN object detection models for the identification of thermal objects in thermograms.",
+                "Constructing pipelines on AWS for training, evaluation, and inference.",
+                "Integrating model predictions with a LLM report summariser."
+            ]                
+        },
+        "dissertation": {
+            "name": "Dissertation",
+            "time": "Jul 2023 - Apr 2024",
+            "position": "[Exploring and Understanding Cross-Lingual Transfer to Catalan and Galician via High-Resource Typological Relatives](/projects/dissertation/)",
+            "responsibilities": [
+                "Implemented cross-lingual transfer by fine-tuning RoBERTa and T5 models across many NLP tasks.",
+                "Utilised an innovative embedding pruning technique to create simulations of small multilingual models from MMTs, circumventing my resource limitations.",
+                "Used statistical methods such as Euclidian Distance and MDS to identify the potential implications of language typology on model performance."
+            ]
+        },
+        "jcr": {
+            "name": "Magdalene College JCR",
+            "time": "Jan 2023 - Dec 2023",
+            "position": "Secretary and Editor",
+            "responsibilities": [
+                "Produced and led a complete redesign of the college's internal newsletter, coordinating and editing regular articles from 12 student writers and artists.",
+                "Contributed to and helped design the committee's website.",
+                "Arranged, presented in and minuted JCR meetings, including meetings with senior staff."
+            ]
+        }
+    },
+    "education": {
+        "university": {
+            "school": "University of Cambridge",
+            "years": "2021 - 2024",
+            "course": "BA (Hons) Linguistics",
+            "extras": {
+                "grade": "1st/First Class Honours",
+                "dissertation": "[Exploring and Understanding Cross-Lingual Transfer to Catalan and Galician via High-Resource Typological Relatives](/projects/dissertation/), Graded Distinction",
+                "awards": "Bundy Scholarship (2024), Peskett Prize (2024), College Scholarship (2022, 2023), College Prize for Linguistics (2022, 2023)"
+            }
+        },
+        "additional": {
+            "school": "Imperial College via Coursera",
+            "years": "2023",
+            "course": "Mathematics for Machine Learning"
+        },
+        "school": {
+            "school": "King Edward VI Grammar School, Chelmsford",
+            "years": "2014 - 2021",
+            "extras": {
+                "a-levels": "Computer Science (A*), Biology (A*), English (A*), French (A)"
+            }
+        }
+    },
+    "skills": "PyTorch, Transformers, AWS (SageMaker, Lambda), NumPy, spaCy, Praat",
+    "languages": "Python, Java, JavaScript, HTML/CSS, English, French (A-Level), Russian (GCSE)",
+    "learning": "C, Pandas, Docker, R, SQL, Portuguese, Vim, [the tools to make this website](/projects/site/)!"
+}

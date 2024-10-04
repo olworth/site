@@ -1,0 +1,71 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="wrapper">
+    <article class="cv">
+        <h1 class="cv__header">
+            {{ cv.header }}
+        </h1>
+        <div class="cv__content">
+            {{ content | safe }}
+            <div class="cv__summary">
+                <div class="cv__experience">
+                    <u>Experience:</u>
+                    {% for key, item in cv.experience %}
+                        <div class="cv__item">
+                            {{ item.name }} - {{ item.position | shortUrlize | safe}}
+                        </div>
+                        <div class="cv__date">
+                            {{ item.time }}
+                        </div>
+                        <div class="cv__subitem">
+                            <ul>
+                            {% for responsibility in item.responsibilities %}
+                                <li>
+                                    {{ responsibility }}
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="cv__education">
+                    <u>Education:</u>
+                    {% for key, item in cv.education %}
+                        <div class="cv__item">
+                            {% if item.course %}
+                                {{ item.school }} - {{ item.course }}
+                            {% else %}
+                                {{ item.school }}
+                            {% endif %}
+                        </div>
+                        <div class="cv__date">
+                            {{ item.years }}
+                        </div>
+                        <div class="cv__subitem">
+                            {{ item.grade }}
+                        </div>
+                        <div class="cv__subitem">
+                            <ul>
+                            {% for key, itemItem in item.extras %}
+                                <li>
+                                <u>{{ key | initialCaps }}</u>: {{ itemItem | shortUrlize | safe }}
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="cv__skills">
+                    <u>Skills</u>:
+                    <br> {{ cv.skills }}<br><br>
+                    <u>Languages</u>:
+                    <br> {{ cv.languages }}<br><br>
+                    <u>Working On</u>: 
+                    <br>{{ cv.learning | shortUrlize | safe }}<br>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+{% endblock %}

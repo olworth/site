@@ -1,0 +1,15 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<article class="project">
+    <h1 class="project__header">
+        {{ project.header }}
+    </h1>
+    <div class="project__link">
+        <a href="{{ project.link }}">Here</a> is a link to the GitHub repo for this project.
+    </div>
+    <div class="project__content">
+        {{ content | safe }}
+    </div>
+</article>
+{% endblock %}
