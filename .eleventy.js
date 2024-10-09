@@ -2,6 +2,7 @@ const path = require("path");
 const prettier = require("prettier");
 const shortUrlize = require('./src/filters/shortUrlize.js');
 const initialCaps = require('./src/filters/initialCaps.js');
+const sass = require("sass");
 
 module.exports = function(eleventyConfig) {
     // Set Nunjucks options if wanted
@@ -15,6 +16,7 @@ module.exports = function(eleventyConfig) {
     });
     // Add passthrough copies
     eleventyConfig.addPassthroughCopy("./src/downloads/");
+    eleventyConfig.addPassthroughCopy("./src/images/");
     // Add transforms
     eleventyConfig.addTransform("prettier", function(content, outputPath) {
     // Prettify output HTML with prettier 
@@ -31,6 +33,12 @@ module.exports = function(eleventyConfig) {
     // Add filters
     eleventyConfig.addFilter('shortUrlize', shortUrlize);
     eleventyConfig.addFilter('initialCaps', initialCaps);
+    // Add CSS/Sass
+    eleventyConfig.setBrowserSyncConfig({
+        files: './dist/css/**/*.css'
+    });
+    // Add fonts
+    eleventyConfig.addPassthroughCopy("./src/fonts/");
     return {
         // Nunjucks
         markdownTemplateEngine: 'njk',

@@ -62,7 +62,6 @@ function shortUrlize(str, length, nofollow) {
 
         // Internal URL, as in /projects/site/index.html
         if (internalRe.test(possibleUrl)) {
-            console.log("here");
             return `<a href="${possibleUrl}"${noFollowAttr}>${shortUrl}</a>${trailingPunctuation}`;
         }
 

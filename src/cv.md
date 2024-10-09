@@ -1,5 +1,6 @@
 ---
 title: "CV"
+permalink: "/cv/index.html"
 layout: "layouts/cv.html"
 cv:
     header: "My CV"

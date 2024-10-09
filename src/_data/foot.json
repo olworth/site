@@ -3,15 +3,18 @@
     "links": [
         {
             "name": "LinkedIn",
-            "url": "https://linkedin.com/in/oli-hepworth/"
+            "url": "https://linkedin.com/in/oli-hepworth/",
+            "image": "dist/images/linkedin.svg"
         },
         {
             "name": "GitHub",
-            "url": "https://github.com/olworth"
+            "url": "https://github.com/olworth",
+            "image": "dist/images/github.svg"
         },
         {
             "name": "Email",
-            "url": "mailto:och26@cantab.ac.uk"
+            "url": "mailto:och26@cantab.ac.uk",
+            "image": "dist/images/email.svg"
         }
     ]
 }

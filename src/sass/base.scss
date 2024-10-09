@@ -1,0 +1,26 @@
+:root {
+    font-family: sans-serif;
+    background: whitesmoke;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+main {
+    margin: 0 auto;
+    padding: 0 100px;
+}
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/roboto-v32-latin-regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+@import 'blocks/head';
+@import 'blocks/skip-link';
