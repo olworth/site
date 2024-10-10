@@ -11,8 +11,8 @@
                 </li>
                 {% endfor %}
                 {% for link in foot.links %} 
-                <li class="head__nav-link" >
-                    <a href="{{ link.url }}">
+                <li>
+                    <a class="link" href="{{ link.url }}">
                         {% include link.image %}
                     </a>
                 </li>

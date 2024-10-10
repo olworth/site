@@ -4,13 +4,12 @@
     border-bottom: 1px solid #a3a4a5;
 
     &__nav {
-        font-family: "Roboto";
         font-weight: 500;
 
         &-list {
             list-style-type: none;
             margin: 0 auto;
-            padding: 0 100px;
+            padding: 0 6%;
             overflow: hidden;
             background-color: white;
             display: flex;
@@ -21,17 +20,20 @@
             flex: 1;
         }
 
-        &-link {
-            margin: 0 auto;
-            padding: 0 5px;
-        }
-
         a {
             color: grey;
             display: flex;
             text-align: center;
-            padding: 14px 16px;
+            margin: 0 auto;
+            padding: 14px 14px;
             position: relative;
+
+            &[class="link"] {
+                padding: 0px 14px;
+                max-width: 19px;
+                align-items: center;
+                height: 100%;
+            }
         
             &[data-state='active'],
             &[aria-current='page'] {
@@ -51,6 +53,15 @@
                 background-color: whitesmoke;
             }
 
+        }
+    }
+}
+
+@media (max-width: 488px) {
+    .head__nav {
+        &-list {
+            margin: 0 auto;
+            padding: 0 0%; 
         }
     }
 }
