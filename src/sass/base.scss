@@ -5,11 +5,12 @@
 body {
     margin: 0 auto;
     padding: 0;
-    margin-bottom: 1%;
+    position: relative;
+    min-height: 100vh;
 }
 main {
     margin: 0 auto;
-    padding: 0 6%;
+    padding: 0 6% 6vh 6%;
 }
 a {
     text-decoration: none;
@@ -25,3 +26,4 @@ a {
 
 @import 'blocks/head';
 @import 'blocks/skip-link';
+@import 'blocks/foot';

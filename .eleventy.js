@@ -1,6 +1,7 @@
 const path = require("path");
 const prettier = require("prettier");
 const shortUrlize = require('./src/filters/shortUrlize.js');
+const clipUrlize = require('./src/filters/clipUrlize.js');
 const initialCaps = require('./src/filters/initialCaps.js');
 const sass = require("sass");
 
@@ -32,6 +33,7 @@ module.exports = function(eleventyConfig) {
     });
     // Add filters
     eleventyConfig.addFilter('shortUrlize', shortUrlize);
+    eleventyConfig.addFilter('clipUrlize', clipUrlize);
     eleventyConfig.addFilter('initialCaps', initialCaps);
     // Add CSS/Sass
     eleventyConfig.setBrowserSyncConfig({

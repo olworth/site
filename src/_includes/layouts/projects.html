@@ -1,6 +1,8 @@
 {% extends "layouts/base.html" %}
+{% set template = "/css/projects.css" %}
 
 {% block content %}
+<div class="wrapper">
     <article class="projects">
         <h1 class="projects__header">
             {{ projects.header }}
@@ -13,4 +15,5 @@
             {% endfor %}
         </div>
     </article>
+</div>
 {% endblock %}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="{{ '/css/base.css' }}">
+        <link rel="stylesheet" href="{{ template | url }}">
         <meta charset="UTF-8" />
         <meta name="description" content="Oli Hepworth's personal site" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,6 @@
         {% include "partials/meta.html" %}
     </head>
     <body>
-        <link rel="stylesheet" href="{{ template | url }}">
         {% include "partials/head.html" %}
         <main tabindex="-1" id="content">
             {% block content %}
@@ -18,5 +17,6 @@
             </p>
             {% endblock %}
         </main>
+        {% include "partials/foot.html" %}
     </body>
 </html>

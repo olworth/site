@@ -1,19 +1,21 @@
 {% extends "layouts/base.html" %}
+{% set template = "/css/contact.css" %}
 
 {% block content %}
+<div class="wrapper">
     <article class="contact">
         <h1 class="contact__header">
             {{ contact.header }}
         </h1>
         <div class="contact__content">
             {{ content | safe }}
-            {% for link in foot.links %} 
-            <li>
-                <a class="button" href="{{ link.url }}">
-                    {{ link.name }}
-                </a>
-            </li>
+            {% for link in contacts.links %}
+                <div class="contact__links">
+                    <a class="image" href="{{ link.url }}">{% include link.image %}</a>
+                    <a class="link" href="{{ link.url }}">{{ link.url | clipUrlize }}</a>
+                </div>
             {% endfor %}
         </div>
     </article>
+</div>
 {% endblock %}
