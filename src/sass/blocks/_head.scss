@@ -1,38 +1,51 @@
 .head {
     position: sticky;
     top: 0;
+    background-color: white;
     border-bottom: 1px solid #a3a4a5;
+    display: flex;
+    flex-direction: row;
+    max-height: 48px;
+    a {
+        color: grey;
+        font-weight: 500;
+        font-family: "Hepta Slab";
+    }
+
+    &__title {
+        display: flex;
+        text-align: left;
+        align-items: center;
+        margin: 0 6% 0 6%;
+        font-size: 24px;
+        position: relative;
+    }
 
     &__nav {
-        font-weight: 500;
-
-        &-list {
-            list-style-type: none;
-            margin: 0 auto;
-            padding: 0 6%;
-            overflow: hidden;
-            background-color: white;
-            display: flex;
-            height: 47px;
-        }
-
-        &-item {
-            flex: 1;
-        }
+        display: flex;
+        list-style-type: none;
+        margin: 0 6% 0 0;
+        overflow: hidden;
+        position: relative;
+        flex: 1;
 
         a {
-            color: grey;
             display: flex;
+            flex: 1;
             text-align: center;
-            margin: 0 auto;
-            padding: 14px 14px;
+            padding: 14.5px 8px 14.5px 8px;
             position: relative;
 
             &[class="link"] {
-                padding: 0px 12px;
-                max-width: 23px;
+                padding: 12px 4px;
+                min-width: 24px;
+                max-width: 24px;
+                max-height: 24px;
                 align-items: center;
-                height: 100%;
+                svg {
+                    max-height: 24px;
+                    max-width: 24px;
+                }
             }
         
             &[data-state='active'],
@@ -55,23 +68,123 @@
 
         }
     }
-}
+    
+    &__items {
+        display: flex;
+        flex: 1;
+        margin: 0 6% 0 0;
+        position: relative;
+    }
 
-@media (max-width: 488px) {
-    .head__nav {
-        &-list {
-            margin: 0 auto;
-            padding: 0 0%; 
-        }
+    &__tab,
+    &__menu {
+        display: none;
     }
 }
 
-@media (max-width: 430px) {
-    .head__nav {
-        a {
-            &[class="link"] {
-                display: none;
+@media (max-width: 702px) {
+    .head {
+        &__nav {
+            margin: 0 0 0 0;
+            a {
+                &[class="link"] {
+                    display: none;
+                }
+            }
+        }
+        &__items {
+            display: flex;
+            flex: 1;
+            margin: 0 calc(6% - 14.5px) 0 0;
+            position: relative;
+        }
+        &__tab {
+            display: flex;
+            margin: 0 calc(6% - 14.5px) 0 0;
+            padding: 14.5px 14.5px 14.5px 14.5px;
+            min-width: 19px;
+            max-width: 19px;
+            max-height: 19px;
+            align-items: center;
+            svg {
+                max-height: 19px;
+                max-width: 19px;
+            }
+            &:hover {
+                background-color: whitesmoke;
+            }
+            &:focus {
+                display: block;
+                .head__menu {
+                    display: block;
+                    z-index: 2;
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 605px) {
+    .head {
+        &__nav {
+            margin: 0 0 0 0;
+            a {
+                &[class="home"] {
+                    display: none;
+                }
             }
         }
     }
 }
+
+
+@media (max-width: 518px) {
+    .head {
+        &__title {
+            margin: 0 2% 0 6%;;
+        }
+        &__nav {
+            margin: 0 2% 0 0;
+        }
+        &__items {
+            margin: 0 0 0 0;
+        }
+        &__tab {
+            display: flex;
+            padding: 14.5px 6% 14.5px 4px;
+            min-width: 19px;
+            max-width: 19px;
+            max-height: 19px;
+            margin-left: auto;
+            svg {
+                max-height: 19px;
+                max-width: 19px;
+            }
+        }
+    }
+}
+
+@media (max-width: 489px) {
+    .head {
+        &__nav {
+            display: none;
+        }
+        &__items {
+            display: none;
+        }
+        &__tab {
+            display: flex;
+            padding: 14.5px 6% 14.5px 4px;
+            min-width: 19px;
+            max-width: 19px;
+            max-height: 19px;
+            margin-left: auto;
+            svg {
+                max-height: 19px;
+                max-width: 19px;
+            }
+        }
+    }
+}
+

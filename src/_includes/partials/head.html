@@ -1,23 +1,36 @@
 <a class="skip-link" href="#content">Skip to content</a>
 <header role="banner" class="head">
-    <div class="wrapper">
+        <h1 class="head__title">
+            <a href="/" {{ functions.isCurrentOrActive(nav.items[0].url, page.url) | safe }}>
+                Oli Hepworth
+            </a>
+        </h1>
         <nav class= "head__nav" aria-label="Main">
-            <ul class="head__nav-list">
+            <div class="head__items">
                 {% for item in nav.items %}
-                <li class="head__nav-item">
+                    {% if item.name == "Home" %}
+                    <a class="home" href="{{ item.url }}" {{ functions.isCurrentOrActive(item.url, page.url) | safe }}>
+                        {{ item.name }}
+                    </a>
+                    {% else %}
                     <a href="{{ item.url }}" {{ functions.isCurrentOrActive(item.url, page.url) | safe }}>
                         {{ item.name }}
                     </a>
-                </li>
-                {% endfor %}
-                {% for link in contacts.links %} 
-                <li>
-                    <a class="link" href="{{ link.url }}">
-                        {% include link.image %}
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
-        </nav>  
-    </div>
+                    {% endif %}
+                {% endfor %}  
+            </div>
+                     
+            {% for link in contacts.links %} 
+                <a class="link" href="{{ link.url }}">
+                    {% include link.image %}
+                </a>
+            {% endfor %}
+        </nav>
+        <div class="head__tab" tabindex="-1">
+            {% include "dist/images/tab.svg" %}
+            <div class="head__menu">
+                test
+            </div>
+        </div>
+        
 </header>

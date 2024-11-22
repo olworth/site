@@ -6,7 +6,7 @@ body {
     margin: 0 auto;
     padding: 0;
     position: relative;
-    min-height: 100vh;
+    min-height: 104vh;
 }
 main {
     margin: 0 auto;
@@ -23,6 +23,15 @@ a {
     src: url('/fonts/roboto-v32-latin-regular.woff2') format('woff2');
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Hepta Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/hepta-slab-v23-latin-regular.woff2') format('woff2');
+    font-display: swap;
+  }
+  
 
 @import 'blocks/head';
 @import 'blocks/skip-link';
